@@ -15,9 +15,9 @@ def main():
     products = {"monitor": 100000, "mouse": 3000, "notebook": 800000, "keyboard": 9800}
     products =  {"mouse":150000, "keyboard":138000, "pointer":80000, "battery":19900}
 
-    temp_dict = {};
+    temp_dict = {}
     ####### 구현 시작 ################
-
+    temp_dict ={ k+'-price':v for k,v in products.items()}
     ########구현 끝 #######################
 
     print("-------------------------------------------------------------------------------")
