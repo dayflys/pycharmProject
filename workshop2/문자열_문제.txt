@@ -1,0 +1,38 @@
+1. 입력으로 제공되는 주민번호 뒷자리의 첫번째 숫자를 이용하여 성별을 판별하는 프로그램을 작성하시오.
+(성별 기준, 남(M): 1 또는 3, 여(F): 2 또는 4)
+입력 예시1) 900103-1******, 출력 예시1) M
+입력 예시2) 070809-4******, 출력 예시2) F
+
+2. 입력으로 제공되는 파일명 리스트를 이용하여, 확장자를 제외한 파일명을 출력하는 프로그램을 작성하시오.
+(단, 파일확장자는 마침표(.)로 구분되며 2~4문자로 구성된다. Ex : doc, docx, sh, 등)
+입력 예시1) [test.html, run.sh, report.docx, data.dat], 출력 예시1) [test, run, report, data]
+입력 예시2) [pic.png, resume.doc, test.py, index.html], 출력 예시2) [pic, resume, test, index]
+
+3.입력으로 제공되는 이름 목록의 각 이름을 첫 문자만 대문자로 변환하고 나머지 문자는 소문자로 변환하는 프로그램을 작성하시오.
+입력1) john, kim, DAVID, miZ, SINAN, TIM
+출력1) John, Kim, David, Miz, Sinan, Tim
+입력2) park, LEE, SMITH, CHOI, bell, tom
+출력2) Park, Lee, Smith, Choi, Bell, Tom
+
+4.입력으로 제공되는 도서 목록의 각 도서 중에서 주어진 검색 키워드가 포함된 도서 목록을 검색하는 프로그램을 작성하시오.
+(단, 검색 키워드와 도서는 대소문자를 구분하지 않는다.)
+입력1)
+검색 키워드: data
+도서 목록: Data Processing, Data Mining, Relational Database, data-intensive application, ML/DL
+출력1) Data Procession, Data Mining, Relational Database, data-intensive
+입력2)
+검색 키워드: pro
+도서 목록: Java Programming, Data Science, Data-Modeling, Programming with Data, Python Programming
+출력2) Java Programming, Programming with Data, Python Programming
+
+5.입력으로 제공되는 도서명 목록에서 각 도서명의 앞과 뒤의 모든 공백을 제거하는 프로그램을 작성하시오. (단, 도서명 중간에 포함된 공백은 제거하지 않는다.)
+입력1) “ Design Thinking   “, “AI and the Future   “, “   Machine Learning and Deep Learning”, “Python Programming”
+출력1) ” Design Thinking”, “AI and the Future”, “Machine Learning and Deep Learning”, “Python Programming”
+입력2) "  Data Science   ", "  Artificial Intelligence and Mathematics  ", "  AI Essentials ","  Future Society"
+출력2) “Data Science”, “Artificial Intelligence and Mathematics”, “AI Essentials”, “Future Society”
+
+6.입력으로 제공되는 문자열 목록의 각 문자열의 길이가 10이상이면 10문자만 남기고 나머지 문자는 …(마침표3개)로 변환하는 프로그래밍을 작성하시오.
+입력1) certification, Programming Languages, Algorithms to Live, Web Development
+출력1) certificat…, Programmin…, Languages, Algorithms…, Web Develo…
+입력2) Data Scientist,intelligence,Python Programming,Machine Learning,artificial intelligence
+출력2) Data Scien..., intelligen..., Python Pro..., Machine Le..., artificial...

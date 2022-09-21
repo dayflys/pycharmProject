@@ -58,3 +58,5 @@ for idx, key in enumerate(num):
 
 for idx, key in enumerate(num,1):#enumerate 함수에 시작 값을 지정할 수 있다. 두 번째 인자로 들어가며 아무숫자나 줄수 있다.
     print(idx, key)# 반복 인덱스와 값을 튜플 값으로 출력해준다.
+
+# help(enumerate) #enumerate(iterable, start=0)
