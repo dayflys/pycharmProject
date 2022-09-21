@@ -71,9 +71,10 @@ def xx():
 #클래스 메서드
 class Cat:
     #eat 메서드- self 필수
-    def eat(self,b):
-        self.name = b
-        print('{}가 먹는다'.format(self.name))
+    def eat(self):
+        self.name = '야옹이'
+        self.age = 2
 
+    def sleep(self):
+        pass
 c1 = Cat() #객체 생성
-c1.eat('건공이')
