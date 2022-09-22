@@ -63,6 +63,10 @@
 
         -객체 생성 문법
             => 변수명 = class명() (자바는 변수명 = new 클래스명())
+
+
+
+
 '''
 #일반함수
 def xx():
@@ -74,7 +78,10 @@ class Cat:
     def eat(self):
         self.name = '야옹이'
         self.age = 2
+        print(id(self))
 
     def sleep(self):
         pass
 c1 = Cat() #객체 생성
+c1.eat()
+print(id(c1))
