@@ -43,3 +43,13 @@ new_date = datetime(**time_dict) # ==> **time_dict = (year = 2002 ,month = 5 ,da
 print(new_date.year)#2002
 print(new_date)#2002-05-06 17:34:39 => 전부 할당
 print(new_date2)#2002-05-06 00:17:34 => named 파라미터 사용
+
+#문자열 ==> 날짜로 변환 datetime.strptime('날짜형태의 문자', '포멧') parse
+new_date = datetime.strptime('2002-05-06 17:34:39', '%Y-%m-%d %H:%M:%S')
+new_date = datetime.strptime('20020506173439', '%Y%m%d%H%M%S') #권장
+print(new_date,type(new_date))
+
+#날짜 ==> 문자열, datetime.strftime('포멧') format
+str_date = new_date.strftime('%Y-%m-%d %H:%M:%S')
+#str_date = new_date.strftime('%Y%m%d%H%M%S') #권장
+print(str_date, type(str_date))
