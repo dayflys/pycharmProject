@@ -1,11 +1,14 @@
-num = int(input())
-list1= []
-for n in range(num):
-    x = input()
-    list1.append(x)
+import numpy as np
 
-for i in range(len(list1)-1):
-    if len(list1[i]) > len(list1[i+1]):
-        list1[i],list1[i+1]=list1[i+1],list1[i]
+from pandas import DataFrame
 
-print(list1)
+with open("./resourse/tourism.csv",'r',encoding='utf-8') as f:
+    line = f.readline()
+
+    lines = f.readlines()
+
+    df = DataFrame(lines, columns=[line])
+    print(df)
+
+
+
