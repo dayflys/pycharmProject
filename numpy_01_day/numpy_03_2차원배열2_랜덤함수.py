@@ -35,3 +35,12 @@ print(np.random.randint(2)) #스칼라 1개 반환: 0
 print(np.random.randint(2, size=5))#벡터 반환: [0 0 1 1 1]
 print(np.random.randint(1,10, size=(2,3)))#행렬 반환: [[4 6 7] [7 5 3]]
 print('*'*100)
+
+#5. np.random.choice()
+print("5. np.random.choice(리스트 ,size=(2,3))")
+print(np.random.choice([3,6,8,9],size=(2,3)))
+'''
+[[9 3 3]
+ [6 9 8]]
+ '''
+print('*'*100)
