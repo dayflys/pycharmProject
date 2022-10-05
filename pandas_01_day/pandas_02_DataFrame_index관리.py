@@ -70,3 +70,17 @@ date
 2003  이순신   30 ==> inplace=True 이기 때문에 원본이 수정되어 출력된다.
 '''
 
+dict_value ={ 'date': ['2002','2003'],
+              'name': ['홍길동','이순신'],
+              'age': [20,30]}
+df = pd.DataFrame(dict_value)
+new_df = df.set_index("date", append=True) #append=False (기존 인덱스를 새로운 값으로 덮어쓰기)
+#append =True (기존 인덱스에 새로운 값을 추가 한다)
+print(new_df)
+print(new_df.index) #다중 index 경우 sql의 pk 다중 컬럼 지정 처럼 다중 index가 지정 된다.
+# none 과 date 는 인덱스의 이름으로 지정 된다.
+'''
+MultiIndex([(0, '2002'),
+            (1, '2003')],
+           names=[None, 'date'])
+'''
