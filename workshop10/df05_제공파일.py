@@ -14,7 +14,8 @@ sp500_copy = sp500.head().copy()
 ### 코드 구현 ######
 df = pd.DataFrame({'Sector': ['Industrials','Industrials'],'Price':[40.32,39.20], 'BookValue':[12.300,3.220]}, index=['SAMSUNG','LG'])
 sp500_copy = pd.concat([sp500_copy,df])
-sp500_copy = sp500_copy.replace({})
+sp500_copy.loc['MMM',:] = ['Information Technology',100.00,100.00]
+sp500_copy.loc['ABT',['Sector','Price']] = ['Information Technology',100.00]
 sp500_copy.drop(['ABBV','ACN'],axis=0, inplace=True)
 ### 코드 구현 ######
 print(sp500_copy)

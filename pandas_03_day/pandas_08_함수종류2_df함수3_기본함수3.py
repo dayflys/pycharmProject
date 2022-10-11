@@ -48,6 +48,14 @@ def my_fun(x):
 new_df = df.apply(my_fun)
 new_df = df.apply(lambda x:x+1)
 print(new_df)
+'''
+   국어  수학  영어
+0   5  15  44
+1   6  36  51
+2   7  27  62
+3   8   9   4
+4   9   4  57
+'''
 
 new_df = df.apply(np.sum, axis=0)
 new_df = df.apply(np.sum, axis=1)
@@ -59,16 +67,50 @@ df["점수총합"] = df.apply(np.sum, axis=1)
 df["평균"] = df.apply(np.mean, axis=1)
 print("평균값이 35 이상만 출력")
 print(df[df["평균"].apply(lambda x: x >= 35.0)])
+'''
+평균값이 35 이상만 출력
+   국어  수학  영어  점수총합    평균
+1   5  35  50    90  45.0
+2   6  26  61    93  46.5
+'''
 
 
 print(df)
+'''
+   국어  수학  영어  점수총합    평균
+0   4  14  43    61  30.5
+1   5  35  50    90  45.0
+2   6  26  61    93  46.5
+3   7   8   3    18   9.0
+4   8   3  56    67  33.5
+'''
 xxx = df.apply(np.sum, axis=0)
 print(xxx)
+'''
+국어       30.0
+수학       86.0
+영어      213.0
+점수총합    329.0
+평균      164.5
+dtype: float64
+'''
 print(xxx.to_frame().T)
+'''
+     국어    수학     영어   점수총합     평균
+0  30.0  86.0  213.0  329.0  164.5
+'''
 xxx = xxx.to_frame().T
 new_df = pd.concat([df, xxx], ignore_index=True)
 new_df.index=[0,1,2,3,4,"과목별 총합"]
 print(new_df)
-
+'''
+          국어    수학     영어   점수총합     평균
+0        4.0  14.0   43.0   61.0   30.5
+1        5.0  35.0   50.0   90.0   45.0
+2        6.0  26.0   61.0   93.0   46.5
+3        7.0   8.0    3.0   18.0    9.0
+4        8.0   3.0   56.0   67.0   33.5
+과목별 총합  30.0  86.0  213.0  329.0  164.5
+'''
 
 
